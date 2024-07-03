@@ -31,6 +31,7 @@ import homeIcon from "@/assets/icons/home-icon.png";
 import myAcIcon from "@/assets/icons/my-ac-icon.png";
 import myIcon from "@/assets/icons/my-icon.png";
 import { useLayoutStore } from "@/stores/layout";
+import { getProvinceCityAreaList } from "@/api/api.js";
 
 const active = ref("HomePage");
 const router = useRouter(),
@@ -64,14 +65,18 @@ const beforeChange = (to) => {
   // }
 };
 
-const navigateTo = (path) => {
+const navigateTo = async (path) => {
   active.value = path;
   layoutStore.setActivePath(path);
   console.log(layoutStore);
+  const res = await getProvinceCityAreaList();
+  console.log(res);
+  console.log(import.meta.env);
+  console.log(import.meta.env.VITE_BASE_URL);
 };
 </script>
 <style lang="scss" scoped>
-.layout{
+.layout {
   display: flex;
   flex-direction: column;
   height: 100%;
