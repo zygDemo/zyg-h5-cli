@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="layout">
     <HomePage v-if="active === 'HomePage'"></HomePage>
     <MyPage v-if="active === 'MyPage'"></MyPage>
 
@@ -70,4 +70,11 @@ const navigateTo = (path) => {
   console.log(layoutStore);
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.layout{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+</style>

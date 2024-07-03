@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <van-nav-bar fixed title="首页" placeholder @click-left="onClickLeft()" />
-    <div>首页</div>
+    <div class="home-sty">首页</div>
   </div>
 </template>
 <script setup>
@@ -19,9 +19,8 @@ const onClickLeft = () => {
 .page {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 66px);
+  min-height: calc(100vh - 50px);
   overflow-y: "hidden";
-  box-sizing: border-box;
   padding: 15px;
 
   background-image: linear-gradient(
@@ -31,5 +30,8 @@ const onClickLeft = () => {
     #fff 30%,
     #f5f5f5 40%
   );
+}
+.home-sty {
+  color: #fff;
 }
 </style>

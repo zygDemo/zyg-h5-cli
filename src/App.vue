@@ -45,9 +45,9 @@ const getPhoneType = () => {
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* background-color: #f5f5f5; */
 }
 /* 在浏览器窗口宽度大于等于 1024 像素时应用其中定义的样式 */
-@media (min-width: 1024px) {
-}
+/* @media (min-width: 1024px) {
+} */
 </style>

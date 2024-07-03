@@ -1,5 +1,5 @@
 import './assets/main.css'
-
+import "amfe-flexible"; //rem转化的工具
 import { createApp } from 'vue'
 // import { createPinia } from 'pinia'
 import store from "./stores";

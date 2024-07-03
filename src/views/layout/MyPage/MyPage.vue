@@ -22,8 +22,8 @@ const onClickLeft = () => {
 .page {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 66px);
-  overflow-y: "hidden";
+  min-height: calc(100vh - 50px);
+  // overflow-y: "hidden";
   box-sizing: border-box;
   padding: 15px;
 
