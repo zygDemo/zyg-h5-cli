@@ -64,6 +64,10 @@ const navigateTo = async (path) => {
   layoutStore.setActivePath(path);
   console.log(layoutStore);
   const res = await getProvinceCityAreaList();
+  if (res.code == 200) {
+    console.log(res.data);
+  }
+
   console.log(res);
   console.log(import.meta.env);
   console.log(import.meta.env.VITE_BASE_URL);

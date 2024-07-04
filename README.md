@@ -1,7 +1,7 @@
 # zyg-h5-cli
 
-This template should help get you started developing with Vue 3 in Vite.
-该项目是基于vue3的一个h5项目模板，免于新建项目进行配置。使用有vue3+vant+scss+pinia+router+axios+px to rem+postcss环境变量+proxy跨域。已配置了移动端项目常用的配置，开箱即用。
+
+该项目是基于vue3的一个h5项目模板，免于新建项目进行配置。使用有vue3+vite+vant+scss+pinia+router+axios+px to rem+postcss环境变量+proxy跨域。已配置了移动端项目常用的配置，开箱即用。
 
 ## Recommended IDE Setup
 
