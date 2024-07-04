@@ -1,7 +1,6 @@
 import axios from "axios";
 import { showToast, showDialog } from "vant";
 
-
 const navigatorFun = () => {
   if (!navigator.onLine) {
     console.log("网络异常");
@@ -16,7 +15,7 @@ const navigatorFun = () => {
     });
   }
 };
-const store = JSON.parse(sessionStorage.getItem("vuex"));
+
 /** 创建axios实例*/
 const request = axios.create({});
 request.defaults.baseURL =
@@ -29,9 +28,6 @@ request.defaults.withCredentials = true; //Send cross-domain request credentials
 
 request.interceptors.request.use(
   (config) => {
-    if (store && store.$user?.token) {
-      config.headers.token = store.$user.token;
-    }
     navigatorFun();
     return config;
   },
@@ -42,7 +38,7 @@ request.interceptors.request.use(
 
 request.interceptors.response.use(
   (response) => {
-    // 请求成功的判断
+    // 请求成功的判断，可根据后端接口返回的code进行修改
     if (response.data.code == 200) {
       return response.data;
     } else {
