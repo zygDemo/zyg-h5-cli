@@ -11,7 +11,7 @@ export const useLayoutStore = defineStore({
         account: "admin",
         password: "123456",
         role: "admin",
-        phone: "18538529932",
+        phone: "18599999933",
         // roles: ["admin"],
       },
     ],
@@ -25,15 +25,15 @@ export const useLayoutStore = defineStore({
       this.activePath = path || "HomePage";
     },
     // 添加你的用户模块的 actions
-    setUserObj(val) {
-      Object.assign(this.userObj, val);
+    setUserObj(obj) {
+      this.userObj={...this.userObj,obj}
     },
     // 注册
     setUserList(val) {
       // this.userList = [...this.userList, ...val];
       if (!val.id) {
         //   新增
-        val.id = Date.now() + Math.floor(Math.random() * 1000);
+        val.id = Date.now() + Math.floor(Math.random() * 1000);//生成UUID
         this.userList.unshift(val);
       } else {
         // 修改

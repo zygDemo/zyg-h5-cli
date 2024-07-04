@@ -26,8 +26,6 @@ request.defaults.baseURL =
 request.defaults.headers.post["Content-Type"] = "application/json";
 request.defaults.timeout = 90000;
 request.defaults.withCredentials = true; //Send cross-domain request credentials
-// request.defaults.headers.common['X-Custom-Header'] = 'foobar'
-// console.log(store.$user.token);
 
 request.interceptors.request.use(
   (config) => {
@@ -48,18 +46,11 @@ request.interceptors.response.use(
     if (response.data.code == 200) {
       return response.data;
     } else {
-      // const { url } = response.config;
-      // const checkUrl = "/standardCore/agreementPayment/getEmployeeAbilityList";
-      // if (url.includes(checkUrl)) {
-      //   console.log(response, "结佣");
-      // } else {
-      // }
       showToast({
         message: response.data.message,
         duration: 2 * 1000,
       });
-
-      // console.error(response.data);
+      // 对返回的错误进行处理
       return response.data;
     }
   },

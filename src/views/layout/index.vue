@@ -45,7 +45,6 @@ onMounted(() => {
 const initData = () => {
   active.value = "HomePage";
   console.log(route.path);
-  // userStore.setUserObj(loginForm);
 };
 onUnmounted(() => {
   window.removeEventListener("popstate", disableBrowserBack, false); //false阻止默认事件
@@ -58,11 +57,6 @@ const disableBrowserBack = () => {
 const beforeChange = (to) => {
   console.log(to);
   return true;
-  // if (!store.state.$user.userInfo?.phone) {
-  //   return false;
-  // } else {
-  //   return true;
-  // }
 };
 
 const navigateTo = async (path) => {
